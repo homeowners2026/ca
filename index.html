@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Ontario Homeowners Rights | 安省业主维权官方网站</title>
+    
+    <!-- SEO & Sharing Meta Tags -->
+    <meta name="description" content="Protect Ontario Homeowners. Join the rally in May 2026. Support HST rebate retroactivity and default exemptions.">
+    <meta property="og:title" content="2026 Ontario Homeowners Rights | 安省业主维权">
+    <meta property="og:description" content="面对高通胀、高房价、负资产危机？加入我们，要求税务公平与法律豁免。">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; transition: background-color 0.3s ease; }
+        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        .glass-card { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); }
+        .countdown-item { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 1.5rem; }
+        
+        /* Language and Layout Controls */
+        .rtl { direction: rtl; font-family: sans-serif; text-align: right; }
+        .contact-pill { background: rgba(220, 38, 38, 0.1); border: 1px solid rgba(220, 38, 38, 0.3); color: #dc2626; }
+        
+        /* Manifesto Styles */
+        .manifesto-section h4 { color: #1e40af; border-left: 5px solid #dc2626; padding-left: 1rem; margin-top: 3rem; margin-bottom: 1rem; font-weight: 900; font-size: 1.5rem; }
+        .legal-header { background: #f1f5f9; border-left: 4px solid #334155; padding: 1.25rem; margin: 1.5rem 0; border-radius: 0 12px 12px 0; }
+        .social-impact { background: #fff1f2; border-left: 4px solid #f43f5e; padding: 1.25rem; margin: 1.5rem 0; border-radius: 0 12px 12px 0; }
+        .legal-label { font-weight: 800; color: #1e293b; display: block; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.75rem; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 leading-relaxed">
+
+    <!-- 语言切换 (顶部固定) -->
+    <div class="fixed top-4 right-4 z-50">
+        <select id="lang-switcher" onchange="switchLanguage(this.value)" class="bg-white/95 border border-slate-200 rounded-full px-5 py-2.5 shadow-2xl focus:outline-none focus:ring-2 focus:ring-red-500 font-bold text-sm cursor-pointer hover:bg-slate-50 transition">
+            <option value="zh">中文 (Chinese)</option>
+            <option value="en">English</option>
+            <option value="fa">فارسی (Persian)</option>
+            <option value="fr">Français (French)</option>
+            <option value="hi">हिन्दी (Hindi)</option>
+            <option value="it">Italiano (Italian)</option>
+            <option value="ru">Русский (Russian)</option>
+            <option value="ja">日本語 (Japanese)</option>
+            <option value="ko">한국어 (Korean)</option>
+        </select>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-40 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0">
+                    <span class="text-2xl font-black text-slate-900 tracking-tighter">HOMEOWNERS<span class="text-red-600 font-black italic">2026</span></span>
+                </div>
+                <div class="hidden xl:flex items-center space-x-8">
+                    <a href="#protest" id="nav-protest" class="hover:text-red-600 font-bold transition">游行安排</a>
+                    <a href="#action" id="nav-action" class="hover:text-red-600 font-bold transition">参与行动</a>
+                    <a href="#manifesto" id="nav-manifesto" class="hover:text-red-600 font-bold transition">核心诉求</a>
+                    <div class="px-5 py-2 rounded-full contact-pill font-mono text-sm font-black">
+                        <i class="far fa-envelope mr-2"></i>Homeowners2026@hotmail.com
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <header id="hero-section" class="gradient-bg text-white py-24 md:py-32 px-4 text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="inline-block px-5 py-1.5 rounded-full bg-red-600/20 text-red-400 text-sm font-black tracking-[0.2em] mb-8 border border-red-600/30 uppercase">
+                Ontario Real Estate Crisis 2026
+            </div>
+            
+            <h1 id="hero-title" class="text-4xl md:text-7xl font-black mb-8 leading-tight tracking-tight">
+                维护业主权益<br><span class="text-red-500">守护我们的家园</span>
+            </h1>
+            
+            <p id="hero-subtitle" class="text-lg md:text-2xl mb-12 text-slate-300 max-w-3xl mx-auto leading-relaxed font-medium">
+                如果你是 2024年或 2027 年交接房屋的业主，正身处疫情高通胀、高房价留下的后遗症中；如果你正面临房价下跌、无力负担重税或面临起诉；请加入我们。
+            </p>
+
+            <!-- 倒计时面板 -->
+            <div class="mb-16">
+                <p id="countdown-label" class="text-xs uppercase tracking-[0.5em] mb-8 font-black text-slate-400">距离第一次集会还有 / COUNTDOWN</p>
+                <div class="flex justify-center space-x-3 md:space-x-8">
+                    <div class="countdown-item p-6 w-24 md:w-36 shadow-2xl">
+                        <span id="days" class="block text-4xl md:text-6xl font-black">--</span>
+                        <span class="text-xs text-slate-400 uppercase font-bold mt-2 tracking-widest">Days</span>
+                    </div>
+                    <div class="countdown-item p-6 w-24 md:w-36 shadow-2xl">
+                        <span id="hours" class="block text-4xl md:text-6xl font-black">--</span>
+                        <span class="text-xs text-slate-400 uppercase font-bold mt-2 tracking-widest">Hours</span>
+                    </div>
+                    <div class="countdown-item p-6 w-24 md:w-36 shadow-2xl">
+                        <span id="minutes" class="block text-4xl md:text-6xl font-black text-red-500">--</span>
+                        <span class="text-xs text-red-500/50 uppercase font-bold mt-2 tracking-widest">Mins</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                <a href="#action" id="btn-petition" class="bg-red-600 text-white px-12 py-5 rounded-full font-black text-xl hover:bg-red-700 transition shadow-2xl">签署联署信 / Sign Petition</a>
+                <div class="bg-white text-slate-900 px-12 py-5 rounded-full font-black text-xl shadow-2xl flex items-center">
+                    <i class="far fa-envelope mr-3 text-red-600"></i>Homeowners2026@hotmail.com
+                </div>
+            </div>
+        </div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-red-600/10 rounded-full blur-[150px] -z-0"></div>
+    </header>
+
+    <!-- 游行安排 -->
+    <section id="protest" class="py-24 px-4 bg-white border-b border-slate-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 id="section-protest-title" class="text-4xl font-black mb-4">抗议维权暂定时间表</h2>
+                <p id="section-protest-subtitle" class="text-slate-500 font-bold tracking-widest uppercase text-sm">Official Rally Schedule & Exact Locations</p>
+                <div class="h-1.5 w-24 bg-red-600 mx-auto rounded-full mt-6"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 mb-20">
+                <div class="glass-card rounded-[2.5rem] shadow-2xl border border-slate-100 flex flex-col group transition duration-500">
+                    <div class="bg-slate-900 text-white p-10 rounded-t-[2.5rem]">
+                        <h3 id="rally1-title" class="text-2xl font-black leading-tight">1. First Rally / 第一次集会 / . اولین تجمع</h3>
+                    </div>
+                    <div class="p-10 flex-grow space-y-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mr-6 shrink-0"><i class="far fa-calendar-alt text-red-600 text-xl"></i></div>
+                            <div>
+                                <p class="font-black text-xl">Sunday, May 10, 2026</p>
+                                <p id="rally1-date-zh" class="text-slate-500 font-bold">2026年5月10日（周日） / . یکشنبه، ۱۰ مه ۲۰۲۶</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mr-6 shrink-0"><i class="far fa-clock text-red-600 text-xl"></i></div>
+                            <p class="font-black text-xl">1:00 PM – 3:00 PM</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mr-6 shrink-0"><i class="fas fa-map-marker-alt text-red-600 text-xl"></i></div>
+                            <div>
+                                <p id="rally1-loc-name" class="font-black text-xl underline decoration-red-600/30 underline-offset-4">Nathan Phillips Square</p>
+                                <p class="text-sm text-slate-500 font-bold mt-2">100 Queen St W, Toronto, ON M5H 2N2</p>
+                            </div>
+                        </div>
+                        <a href="https://maps.google.com/?q=Nathan+Phillips+Square" target="_blank" class="block w-full text-center py-5 bg-slate-900 text-white rounded-2xl font-black text-lg hover:bg-black transition">查看地图 / View Map</a>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-[2.5rem] shadow-2xl border border-slate-100 flex flex-col group transition duration-500">
+                    <div class="bg-red-600 text-white p-10 rounded-t-[2.5rem]">
+                        <h3 id="rally2-title" class="text-2xl font-black leading-tight">2. Major Protest / 省议会大游行 / . تظاهرات اصلی</h3>
+                    </div>
+                    <div class="p-10 flex-grow space-y-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mr-6 shrink-0"><i class="far fa-calendar-alt text-red-600 text-xl"></i></div>
+                            <div>
+                                <p class="font-black text-xl">Friday, May 22, 2026</p>
+                                <p id="rally2-date-zh" class="text-slate-500 font-bold">2026年5月22日（周五） / . جمعه، ۲۲ مه ۲۰۲۶</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mr-6 shrink-0"><i class="far fa-clock text-red-600 text-xl"></i></div>
+                            <p class="font-black text-xl">10:00 AM – 12:00 PM</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mr-6 shrink-0"><i class="fas fa-map-marker-alt text-red-600 text-xl"></i></div>
+                            <div>
+                                <p id="rally2-loc-name" class="font-black text-xl underline decoration-red-600/30 underline-offset-4">Queen's Park (South Lawn)</p>
+                                <p id="addr-label" class="text-xs text-slate-400 font-black mt-2 uppercase tracking-tighter">Location / 地址 / . آدرس :</p>
+                                <p class="text-sm text-slate-700 font-bold">111 Wellesley St W, Toronto, ON M7A 1A2</p>
+                            </div>
+                        </div>
+                        <a href="https://maps.google.com/?q=111+Wellesley+St+W,+Toronto" target="_blank" class="block w-full text-center py-5 bg-red-600 text-white rounded-2xl font-black text-lg hover:bg-red-700 transition">查看地图 / View Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 参与行动区 -->
+    <section id="action" class="py-24 px-4 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div class="flex flex-col">
+                    <h3 id="action-survey-title" class="text-3xl font-black mb-6">第一部分：签署调研问卷 (Survey Action)</h3>
+                    <p id="action-survey-desc" class="text-slate-400 mb-10 text-lg flex-grow">请完成业主情况调研及联署。您的每一个反馈都是我们与政府谈判时最有力的筹码。</p>
+                    <a href="https://forms.gle/mN3QcY1apDEPPSk6A" target="_blank" class="flex items-center justify-between p-10 bg-blue-600 rounded-[2.5rem] hover:bg-blue-700 transition shadow-2xl group">
+                        <span id="btn-survey-text" class="text-2xl font-black">签署 Google Form</span>
+                        <i class="fas fa-external-link-alt text-3xl group-hover:scale-110 transition"></i>
+                    </a>
+                </div>
+                <div class="flex flex-col">
+                    <h3 id="action-voices-title" class="text-3xl font-black mb-6">第二部分：留言墙 (Voices Wall)</h3>
+                    <p id="action-voices-desc" class="text-slate-400 mb-10 text-lg flex-grow">在互动墙上留下您的心声和故事，让媒体和公众看到数据背后的真实人间疾苦。</p>
+                    <a href="https://padlet.com/homeowners2026/voices" target="_blank" class="flex items-center justify-between p-10 bg-orange-600 rounded-[2.5rem] hover:bg-orange-700 transition shadow-2xl group">
+                        <span id="btn-voices-text" class="text-2xl font-black">进入 Padlet 互动墙</span>
+                        <i class="fas fa-comment-dots text-3xl group-hover:scale-110 transition"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心诉求 -->
+    <section id="manifesto" class="py-24 px-4 bg-slate-50 manifesto-section text-slate-800">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 id="section-manifesto-title" class="text-4xl font-black mb-4">民意联署核心诉求 (The Manifesto)</h2>
+                <div class="h-1.5 w-24 bg-red-600 mx-auto rounded-full mt-6"></div>
+            </div>
+
+            <div id="manifesto-content" class="bg-white p-8 md:p-20 rounded-[4rem] shadow-2xl border border-slate-100 leading-relaxed">
+                <p id="petition-title" class="text-2xl md:text-3xl font-black text-red-600 mb-8 underline decoration-red-500/20 decoration-8 underline-offset-8 uppercase">URGENT PETITION: Protecting Ontario Pre-Construction Buyers</p>
+                <div class="space-y-6 text-lg font-medium text-slate-600 mb-12">
+                    <p id="p-intro-1">安省房地产市场正经历严重低迷。高利率和飙升的建筑成本已将许多开发商推向破产边缘。我们原定于 2024 年至 2027 年间交付的项目也面临极端风险。</p>
+                    <p id="p-intro-2">在 2026 年 3 月的预算中，政府宣布对 2026 年 4 月至 2027 年 3 月间签署的新房合同实行全额 HST 豁免（最高 13 万加元）。然而，这一政策排除了我们这些在市场高峰期入场、目前面临严重负资产和交接危机的存量买家。</p>
+                    <p id="p-intro-3">大规模违约或开发商破产将触发系统性经济风险。我们认为政府必须将此项 HST 豁免政策追溯适用于 2024-2027 年的交付项目。</p>
+                </div>
+
+                <div>
+                    <h4 id="m-p1-title">Part 1: Extend the 13% HST Rebate Retroactively (2024-2027)</h4>
+                    <div class="legal-header">
+                        <span id="m-p1-l-label" class="legal-label">Legal Rationale (Principle of Tax Equity)</span>
+                        <p id="m-p1-l-desc">根据《加拿大权利与自由宪章》及相关税务公平原则，政府政策不应产生实质性的“政策歧视”。目前的做法迫使早期建筑业的支持者在承受资产贬值的同时，还要负担比后期买家更高的税务成本。</p>
+                    </div>
+                    <div class="social-impact">
+                        <span id="m-p1-s-label" class="legal-label text-red-600">Social Impact & Livelihood</span>
+                        <p id="m-p1-s-desc">这些业主面临 15 万至 35 万加元的评估缺口。追溯 HST 退税是防止中产家庭财务破产的最有效财务杠杆，能直接转化为交接首付款。</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 id="m-p2-title">Part 2: Recognize "Non-Subjective Default" and Exempt Honest Buyers</h4>
+                    <div class="legal-header">
+                        <span id="m-p2-l-label" class="legal-label">Legal Rationale (Frustration of Contract / Force Majeure)</span>
+                        <p id="m-p2-l-desc">法律应保护“不可抗力”条件下运行的个人。疫情导致的建筑延期结合历史性的加息周期，构成了签约时无法预见的“环境剧变”（Frustration of Contract）。</p>
+                    </div>
+                    <div class="social-impact">
+                        <span id="m-p2-s-label" class="legal-label text-red-600">Social Impact & Livelihood</span>
+                        <p id="m-p2-s-desc">对于信用记录良好的买家，因评估价值暴跌而导致的无法交接不应被视为“恶意违约”。政府应发布指南限制开发商对这些客观无力履约者的惩罚性起诉。</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 id="m-p3-title">Part 3: Establish a Tripartite Burden-Sharing Mechanism</h4>
+                    <div class="legal-header">
+                        <span id="m-p3-l-label" class="legal-label">Legal Rationale (Government Administrative Responsibility)</span>
+                        <p id="m-p3-l-desc">在极端经济危机和市场失灵期间，政府有责任干预并提供合规路径：</p>
+                        <ul id="m-p3-list" class="list-disc ml-6 mt-4 space-y-3 font-semibold text-slate-700">
+                            <li>税收减免： 减免严重受灾区域的土地转让税 (LTT)。</li>
+                            <li>协作融资： 协调开发商提供 VTB 抵押贷款，或允许免费合同转让。</li>
+                            <li>利息补贴： 为被迫使用高息私贷的买家提供利息补贴。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 id="m-p4-title">Part 4: Mitigate Systemic Risks and Healthcare Burdens</h4>
+                    <div class="p-8 bg-slate-900 text-white rounded-3xl mt-8">
+                        <p id="m-p4-intro" class="font-bold mb-4 italic text-slate-300 text-lg">允许数万个家庭面临破产将导致：</p>
+                        <ul id="m-p4-list" class="space-y-4 font-bold">
+                            <li class="flex items-start"><span class="text-red-500 mr-3 text-xl">●</span> <span id="m-p4-i1">司法系统瘫痪：大规模违约诉讼将耗尽社会法律资源。</span></li>
+                            <li class="flex items-start"><span class="text-red-500 mr-3 text-xl">●</span> <span id="m-p4-i2">健康危机：长期的焦虑和恐惧演变为公共心理健康负担。</span></li>
+                            <li class="flex items-start"><span class="text-red-500 mr-3 text-xl">●</span> <span id="m-p4-i3">信用系统不稳定：将优质纳税人逐出经济循环将导致安省长期税收损失。</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-20 pt-10 border-t border-slate-100 flex flex-col items-center">
+                    <p id="manifesto-slogan" class="font-black text-center text-slate-900 text-2xl italic mb-10 tracking-tight">“让安省的住房政策回归初衷：保护家庭，稳定社会。”</p>
+                    <div id="privacy-box-content" class="bg-blue-50 p-8 rounded-[2rem] text-sm text-blue-900 border border-blue-100 flex items-start gap-6 max-w-3xl shadow-sm">
+                        <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shrink-0 shadow-md"><i class="fas fa-shield-alt text-blue-600 text-xl"></i></div>
+                        <p id="privacy-text"><strong>隐私与安全承诺：</strong> 所有敏感财务数据均经过加密，仅用于汇总统计分析。在未经授权的情况下，绝对不会公开个人身份信息。 (Privacy Commitment: All sensitive data is encrypted and used only for aggregated statistical analysis.)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 捐款 -->
+    <section id="donation" class="py-24 px-4 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 id="donation-title" class="text-4xl font-black mb-8 text-slate-900">为游行自愿捐款 (Voluntary Donation)</h2>
+            <p id="donation-desc" class="text-xl text-slate-600 mb-12 font-medium">所有资金将透明用于维权行动的物资准备，确保我们的呼声被社会听到。</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-12 text-left">
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
+                    <i class="fas fa-bullhorn text-red-600 text-3xl mb-6"></i>
+                    <p id="don-item1-title" class="font-black text-lg mb-3">宣传展示</p>
+                    <p id="don-item1-desc" class="text-sm text-slate-500 font-bold">用于制作防水横幅、手持口号牌、维权统一背心、以及社交媒体精准广告投放。</p>
+                </div>
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
+                    <i class="fas fa-megaphone text-red-600 text-3xl mb-6"></i>
+                    <p id="don-item2-title" class="font-black text-lg mb-3">扩音设备</p>
+                    <p id="don-item2-desc" class="text-sm text-slate-500 font-bold">租赁高分贝无线扩音系统、音响支架，确保在集会广场能够被清晰听到。</p>
+                </div>
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
+                    <i class="fas fa-hands-helping text-red-600 text-3xl mb-6"></i>
+                    <p id="don-item3-title" class="font-black text-lg mb-3">后勤与法律</p>
+                    <p id="don-item3-desc" class="text-sm text-slate-500 font-bold">集会场地申请费用、法律建议书的大规模印刷分发、现场补水站及急救物资。</p>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 text-white p-12 rounded-[4rem] shadow-2xl relative overflow-hidden group">
+                <p class="text-red-500 uppercase tracking-[0.3em] text-xs font-black mb-4">Interac E-transfer</p>
+                <p class="text-2xl md:text-5xl font-mono font-black break-all select-all mb-4">Homeowners2026@hotmail.com</p>
+                <div class="mt-8 flex justify-center gap-6 text-xs font-bold text-slate-400">
+                    <span id="don-tag1" class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> 专款专用</span>
+                    <span id="don-tag2" class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> 定期公示</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="py-24 px-4 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-6xl mx-auto text-center">
+            <h3 id="footer-qr-title" class="text-3xl font-black mb-16 tracking-tight text-slate-900">扫描二维码，加入族裔维权群</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
+                <div class="flex flex-col items-center">
+                    <div class="w-72 h-72 bg-white p-5 rounded-[3rem] shadow-2xl mb-8 border border-slate-200">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=WeChatGroup_NathanPhilips" alt="Nathan Phillips 群" class="w-full h-full object-cover rounded-[2rem]">
+                    </div>
+                    <p id="qr-desc1" class="font-black text-slate-900 text-lg">Group: 2026年5月周末Nathan Philips维权群</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-72 h-72 bg-white p-5 rounded-[3rem] shadow-2xl mb-8 border border-slate-200">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=WeChatGroup_QueensPark" alt="Queen's Park 群" class="w-full h-full object-cover rounded-[2rem]">
+                    </div>
+                    <p id="qr-desc2" class="font-black text-slate-900 text-lg">Group: 2026年5月周中Queen's Park维权群</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-72 h-72 bg-white p-5 rounded-[3rem] shadow-2xl mb-8 border border-slate-200">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=WhatsAppGroup_HomeHSTProtest" alt="WhatsApp 群" class="w-full h-full object-cover rounded-[2rem]">
+                    </div>
+                    <p id="qr-desc3" class="font-black text-slate-900 text-lg">Group: Home HST Protest (WhatsApp Group)</p>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-slate-200 text-slate-400 font-bold">
+                <p>© 2026 Ontario Homeowners Coalition. All Rights Reserved.</p>
+                <div class="mt-4 flex justify-center gap-6 text-sm">
+                    <span id="footer-email-tag" class="text-slate-900 font-bold">Email: Homeowners2026@hotmail.com</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const langData = {
+            zh: {
+                navP: "游行安排", navA: "参与行动", navM: "核心诉求",
+                heroT: "维护业主权益<br><span class='text-red-500'>守护我们的家园</span>",
+                heroS: "如果你是 2024年或 2027 年交接房屋的业主，正面临高通胀、高房价、负资产及面临起诉的困境；请加入我们。",
+                countL: "距离第一次集会还有 / COUNTDOWN", btnP: "签署联署信 / Sign Petition",
+                proT: "抗议维权暂定时间表", proST: "Official Rally Schedule & Exact Locations",
+                r1T: "1. First Rally / 第一次集会 / . اولین تجمع", 
+                r1D: "2026年5月10日（周日） / . یکشنبه، ۱۰ مه ۲۰२۶",
+                r1LN: "Nathan Phillips Square",
+                r2T: "2. Major Protest / 省议会大游行 / . تظاهرات اصلی",
+                r2D: "2026年5月22日（周五） / . جمعه، ۲۲ مه ۲۰२۶",
+                r2LN: "Queen's Park (South Lawn)",
+                addrL: "Location / 地址 / . آدرس :",
+                actST: "第一部分：签署调研问卷 (Survey Action)",
+                actSD: "请完成业主情况调研及联署。您的每一个反馈都是我们与政府谈判时最有力的筹码。",
+                btnST: "签署 Google Form",
+                actVT: "第二部分：留言墙 (Voices Wall)",
+                actVD: "在互动墙上留下您的心声和故事，让媒体和公众看到数据背后的真实人间疾苦。",
+                btnVT: "进入 Padlet 互动墙",
+                manT: "民意联署核心诉求 (The Manifesto)",
+                pT: "URGENT PETITION: Protecting Ontario Pre-Construction Buyers",
+                pI1: "安省房地产市场正经历严重低迷。高利率和飙升的建筑成本已将许多开发商推向破产边缘。我们原定于 2024 年至 2027 年间交付的项目也面临极端风险。",
+                pI2: "在 2026 年 3 月的预算中，政府宣布对 2026 年 4 月至 2027 年 3 月间签署的新房合同实行全额 HST 豁免（最高 13 万加元）。然而，这一政策排除了我们这些在市场高峰期入场、目前面临严重负资产和交接危机的存量买家。",
+                pI3: "大规模违约或开发商破产将触发系统性经济风险。我们认为政府必须将此项 HST 豁免政策追溯适用于 2024-2027 年的交付项目。",
+                mP1T: "Part 1: Extend the 13% HST Rebate Retroactively (2024-2027)",
+                mP1LL: "Legal Rationale (Principle of Tax Equity)",
+                mP1LD: "根据《加拿大权利与自由宪章》及相关税务公平原则，政府政策不应产生实质性的“政策歧视”。目前的做法迫使早期建筑业的支持者在承受资产贬值的同时，还要负担比后期买家更高的税务成本。",
+                mP1SL: "Social Impact & Livelihood",
+                mP1SD: "这些业主面临 15 万至 35 万加元的评估缺口。追溯 HST 退税是防止中产家庭财务破产的最有效财务杠杆，能直接转化为交接首付款。",
+                mP2T: "Part 2: Recognize 'Non-Subjective Default' and Exempt Honest Buyers",
+                mP2LL: "Legal Rationale (Frustration of Contract / Force Majeure)",
+                mP2LD: "法律应保护“不可抗力”条件下运行的个人。疫情导致的建筑延期结合历史性的加息周期，构成了签约时无法预见的“环境剧变”（Frustration of Contract）。",
+                mP2SL: "Social Impact & Livelihood",
+                mP2SD: "对于信用记录良好的买家，因评估价值暴跌而导致的无法交接不应被视为“恶意违约”。政府应发布指南限制开发商对这些客观无力履约者的惩罚性起诉。",
+                mP3T: "Part 3: Establish a Tripartite Burden-Sharing Mechanism",
+                mP3LL: "Legal Rationale (Government Administrative Responsibility)",
+                mP3LD: "在极端经济危机和市场失灵期间，政府有责任干预并提供合规路径：",
+                mP3Li: "<li>税收减免： 减免严重受灾区域的土地转让税 (LTT)。</li><li>协作融资： 协调开发商提供 VTB 抵押贷款，或允许免费合同转让。</li><li>利息补贴： 为被迫使用高息私贷的买家提供利息补贴。</li>",
+                mP4T: "Part 4: Mitigate Systemic Risks and Healthcare Burdens",
+                mP4In: "允许数万个家庭面临破产将导致：",
+                mP4Li: "<li>司法系统瘫痪：大规模违约诉讼将耗尽社会法律资源。</li><li>健康危机：长期的焦虑和恐惧演变为公共心理健康负担。</li><li>信用系统不稳定：将优质纳税人逐出经济循环将导致安省长期税收损失。</li>",
+                manS: "“让安省的住房政策回归初衷：保护家庭，稳定社会。”",
+                priT: "<strong>隐私与安全承诺：</strong> 所有敏感财务数据均经过加密，仅用于汇总统计分析。在未经授权的情况下，绝对不会公开个人身份信息。 (Privacy Commitment: All sensitive data is encrypted and used only for aggregated statistical analysis.)",
+                donT: "为游行自愿捐款 (Voluntary Donation)",
+                donD: "所有资金将透明用于维权行动的物资准备，确保我们的呼声被社会听到。",
+                donI1T: "宣传展示", donI1D: "用于制作防水横幅、手持口号牌、维权统一背心、以及社交媒体精准广告投放。",
+                donI2T: "扩音设备", donI2D: "租赁高分贝无线扩音系统、音响支架，确保在集会广场能够被清晰听到。",
+                donI3T: "后勤与法律", donI3D: "集会场地申请费用、法律建议书的大规模印刷分发、现场补水站及急救物资。",
+                donT1: "<i class='fas fa-check-circle text-green-500 mr-2'></i> 专款专用",
+                donT2: "<i class='fas fa-check-circle text-green-500 mr-2'></i> 定期公示",
+                fooQT: "扫描二维码，加入族裔维权群",
+                qrD1: "Group: 2026年5月周末Nathan Philips维权群",
+                qrD2: "Group: 2026年5月周中Queen's Park维权群",
+                qrD3: "Group: Home HST Protest (WhatsApp Group)",
+                fooET: "Email: Homeowners2026@hotmail.com"
+            },
+            en: {
+                navP: "Rally Schedule", navA: "Action", navM: "Manifesto",
+                heroT: "Protect Our Homes<br><span class='text-red-500'>Defend Our Rights</span>",
+                heroS: "If you are closing in 2024-2027 and facing high inflation, negative equity, or legal threats, join our movement to make your voice heard.",
+                countL: "Countdown to First Rally", btnP: "Sign Petition",
+                proT: "Protest Schedule", proST: "Official Rally Schedule & Exact Locations",
+                r1T: "1. First Rally", r1D: "Sunday, May 10, 2026", r1LN: "Nathan Phillips Square",
+                r2T: "2. Major Protest", r2D: "Friday, May 22, 2026", r2LN: "Queen's Park (South Lawn)",
+                addrL: "Location / Address:",
+                actST: "Part 1: Sign the Survey Action",
+                actSD: "Please complete the survey and petition. Every feedback is a powerful lever in our negotiations with the government.",
+                btnST: "Sign Google Form",
+                actVT: "Part 2: Interactive Voices Wall",
+                actVD: "Leave your heart and story on the interaction wall. Let the media and public see the real human suffering behind the data.",
+                btnVT: "Enter Padlet Wall",
+                manT: "Urgent Petition: The Manifesto",
+                pT: "URGENT PETITION: Protecting Ontario Pre-Construction Buyers",
+                pI1: "The Ontario real estate market is experiencing a severe downturn. High interest rates and soaring costs have pushed many families to the brink.",
+                pI2: "In the 2026 budget, the government announced a full HST exemption (up to $130k) for future contracts. However, this excludes existing buyers facing immediate crises.",
+                pI3: "We call for the government to extend and retroactively apply this HST exemption to projects closing between 2024 and 2027.",
+                mP1T: "Part 1: Extend the 13% HST Rebate Retroactively (2024-2027)",
+                mP1LL: "Legal Rationale (Principle of Tax Equity)",
+                mP1LD: "Policies should not create substantive discrimination. The current approach forces early supporters to bear the brunt of inflation while rewarding late entrants.",
+                mP1SL: "Social Impact & Livelihood",
+                mP1SD: "Homeowners face an appraisal gap of $150k-$350k. A retroactive rebate directly aids closing and prevents systemic middle-class bankruptcy.",
+                mP2T: "Part 2: Recognize 'Non-Subjective Default' and Limit Legal Pursuits",
+                mP2LL: "Legal Rationale (Force Majeure / Frustration)",
+                mP2LD: "The law must protect honest individuals under force majeure. Pandemic delays and historic rate hikes were unforeseeable at the time of signing.",
+                mP2SL: "Social Impact & Livelihood",
+                mP2SD: "Inability to close due to massive appraisal drops should not be categorized as malicious default. Limit punitive lawsuits against honest buyers.",
+                mP3T: "Part 3: Tripartite Burden-Sharing Mechanism",
+                mP3LL: "Legal Rationale (Gov. Responsibility)",
+                mP3LD: "In times of market failure, the government has a duty to intervene and provide pathways:",
+                mP3Li: "<li>Tax Relief: Land Transfer Tax (LTT) relief for severely impacted areas.</li><li>Collaborative Financing: Coordinate VTB mortgages or allow free contract transfers.</li><li>Interest Subsidies: For buyers forced into high-interest private lending.</li>",
+                mP4T: "Part 4: Mitigate Systemic Risks",
+                mP4In: "Allowing thousands of families to face bankruptcy will lead to:",
+                mP4Li: "<li>Judicial Paralysis: Massive default lawsuits will drain social legal resources.</li><li>Health Crisis: Chronic anxiety evolving into public mental health burdens.</li><li>Credit Instability: Long-term tax revenue loss for Ontario.</li>",
+                manS: "“Return housing policies to their original intent: protecting families.”",
+                priT: "<strong>Privacy Commitment:</strong> All sensitive data is encrypted and used only for aggregated statistical analysis. Individual identities will NEVER be disclosed without consent.",
+                donT: "Voluntary Donation",
+                donD: "All funds will be used transparently for rally materials to ensure our voices are heard.",
+                donI1T: "Promotion", donI1D: "For banners, signs, vests, and social media advertising.",
+                donI2T: "Audio Equipment", donI2D: "Renting high-power audio systems to be heard in public squares.",
+                donI3T: "Logistics", donI3D: "Permit fees, large-scale printing of legal letters, water stations, and first aid.",
+                donT1: "<i class='fas fa-check-circle text-green-500 mr-2'></i> Dedicated Use",
+                donT2: "<i class='fas fa-check-circle text-green-500 mr-2'></i> Periodic Disclosure",
+                fooQT: "Scan QR to Join Ethnic Groups",
+                qrD1: "Group: May 2026 Weekend Nathan Philips Group",
+                qrD2: "Group: May 2026 Weekday Queen's Park Group",
+                qrD3: "Group: Home HST Protest (WhatsApp Group)",
+                fooET: "Email: Homeowners2026@hotmail.com"
+            },
+            fa: {
+                navP: "برنامه تجمع", navA: "اقدام", navM: "مانیفست",
+                heroT: "از خانه‌هایمان محافظت کنیم<br><span class='text-red-500'>از حقوقمان دفاع کنیم</span>",
+                heroS: "اگر در سال‌های ۲۰۲۴ تا ۲۰۲۷ ملک تحویل می‌گیرید و با بحران تورم یا تهدیدهای قانونی مواجه هستید، به ما بپیوندید.",
+                countL: "شمارش معکوس تا اولین تجمع", btnP: "امضای طومار",
+                proT: "زمان‌بندی تجمعات اعتراضی", proST: "مکان‌های دقیق و زمان‌بندی رسمی تجمعات",
+                r1T: "۱. اولین تجمع", r1D: "یکشنبه، ۱۰ مه ۲۰۲۶", r1LN: "میدان نیتن فیلیپس",
+                r2T: "۲. تظاهرات اصلی", r2D: "جمعه، ۲۲ مه ۲۰۲۶", r2LN: "کوئینز پارک (ضلع جنوبی)",
+                addrL: "آدرس :",
+                actST: "بخش اول: شرکت در نظرسنجی و امضا",
+                actSD: "لطفاً نظرسنجی و طومار را تکمیل کنید. هر بازخورد اهرمی قدرتمند در مذاکرات ما با دولت است.",
+                btnST: "فرم گوگل را امضا کنید",
+                actVT: "بخش دوم: دیوار تعاملی صداها",
+                actVD: "داستان خود را در دیوار تعاملی به اشتراک بگذارید. بگذارید رسانه‌ها درد واقعی پشت آمار را ببینند.",
+                btnVT: "وارد دیوار پدلت شوید",
+                manT: "مانیفست مطالبات اصلی",
+                pT: "درخواست فوری: حمایت از خریداران انتاریو در برابر بحران املاک",
+                pI1: "بازار مسکن انتاریو با رکود شدیدی مواجه است. نرخ‌های بالا خانواده‌ها را به مرز ورشکستگی رسانده است.",
+                pI2: "بودجه ۲۰۲۶ معافیت مالیاتی جدیدی را معرفی کرد، اما خریداران فعلی را شامل نمی‌شود.",
+                pI3: "ما خواستار اعمال گذشته‌نگر این معافیت برای پروژه‌های ۲۰۲۴ تا ۲۰۲۷ هستیم.",
+                mP1T: "بخش ۱: بازپرداخت ۱۳٪ مالیات HST (۲۰۲۴-۲۰۲۷)",
+                mP1LL: "مبنای قانونی (اصل برابری مالیاتی)",
+                mP1LD: "سیاست‌ها نباید تبعیض قائل شوند. رویکرد فعلی حامیان اولیه صنعت را مجازات می‌کند.",
+                mP1SL: "تأثیر اجتماعی و معیشتی",
+                mP1SD: "این مبلغ به جلوگیری از ورشکستگی سیستماتیک طبقه متوسط کمک می‌کند.",
+                mP2T: "بخش ۲: به رسمیت شناختن «عدم ایفای تعهد غیرارادی»",
+                mP2LL: "مبنای قانونی (فورس ماژور / انحلال قرارداد)",
+                mP2LD: "قانون باید از افراد صادق در شرایط اضطراری محافظت کند. تأخیرها غیرقابل پیش‌بینی بود.",
+                mP2SL: "تأثیر اجتماعی و معیشتی",
+                mP2SD: "ناتوانی در تحویل به دلیل افت شدید ارزش ملک نباید «تخلف عمدی» تلقی شود.",
+                mP3T: "بخش ۳: مکانیزم تقسیم بار سه جانبه",
+                mP3LL: "مبنای قانونی (مسئولیت دولتی)",
+                mP3LD: "در زمان شکست بازار، دولت وظیفه مداخله دارد:",
+                mP3Li: "<li>معافیت مالیاتی زمین (LTT) برای مناطق به شدت آسیب‌دیده.</li><li>تسهیل وام‌های VTB توسط سازندگان.</li><li>ارائه یارانه بهره برای خریداران تحت فشار.</li>",
+                mP4T: "بخش ۴: کاهش خطرات سیستماتیک",
+                mP4In: "اجازه ورشکستگی به هزاران خانواده منجر خواهد شد به:",
+                mP4Li: "<li>فلج قضایی: شکایت‌های انبوه منابع حقوقی را تخلیه می‌کند.</li><li>بحران سلامت: فشار روانی شدید بر سیستم سلامت عمومی.</li><li>بی‌ثباتی اعتباری: از دست دادن درازمدت درآمدهای مالیاتی انتاریو.</li>",
+                manS: "«سیاست‌های مسکن باید به هدف اصلی خود بازگردند: حمایت از خانواده‌ها.»",
+                priT: "<strong>تعهد به حریم خصوصی:</strong> داده‌های حساس رمزگذاری شده و فقط برای تحلیل آماری استفاده می‌شوند. هویت افراد هرگز بدون رضایت فاش نخواهد شد.",
+                donT: "کمک داوطلبانه",
+                donD: "تمام مبالغ شفافانه برای هزینه‌های تجمع استفاده خواهد شد.",
+                donI1T: "تبلیغات", donI1D: "برای بنرها، تابلوها، جلیقه‌ها و تبلیغات شبکه‌های اجتماعی.",
+                donI2T: "تجهیزات صوتی", donI2D: "اجاره سیستم‌های صوتی قوی برای میدان‌های عمومی.",
+                donI3T: "تدارکات", donI3D: "هزینه‌های مجوز، چاپ نامه‌های حقوقی و ایستگاه‌های آب.",
+                donT1: "<i class='fas fa-check-circle text-green-500 mr-2'></i> استفاده اختصاصی",
+                donT2: "<i class='fas fa-check-circle text-green-500 mr-2'></i> گزارش دوره‌ای",
+                fooQT: "اسکن کد برای عضویت در گروه‌های قومی",
+                qrD1: "گروه: تجمع آخر هفته میدان نیتن فیلیپس",
+                qrD2: "گروه: تجمع وسط هفته کوئینز پارک",
+                qrD3: "گروه: اعتراض مالیات مسکن (واتس‌اپ)",
+                fooET: "ایمیل: Homeowners2026@hotmail.com"
+            },
+            fr: {
+                navP: "Calendrier", navA: "Action", navM: "Manifeste",
+                heroT: "Protégez nos foyers<br><span class='text-red-500'>Défendez nos droits</span>",
+                heroS: "Si vous concluez en 2024-2027 et faites face à l'inflation, à l'équité négative ou à des menaces, rejoignez-nous.",
+                countL: "Compte à rebours avant la première manifestation", btnP: "Signer la pétition",
+                proT: "Calendrier des protestations", proST: "Lieux exacts et horaires officiels",
+                r1T: "1. Première manifestation", r1D: "Dimanche 10 mai 2026", r1LN: "Nathan Phillips Square",
+                r2T: "2. Grande manifestation", r2D: "Vendredi 22 mai 2026", r2LN: "Queen's Park (Pelouse sud)",
+                addrL: "Lieu / Adresse :",
+                actST: "Partie 1 : Signer le sondage",
+                actSD: "Veuillez remplir le sondage. Chaque réponse est un levier puissant dans nos négociations avec le gouvernement.",
+                btnST: "Signer Google Form",
+                actVT: "Partie 2 : Mur des voix interactif",
+                actVD: "Partagez votre histoire. Laissez les médias et le public voir la réelle souffrance humaine derrière les données.",
+                btnVT: "Entrer sur Padlet",
+                manT: "Pétition urgente : Le Manifeste",
+                pT: "PÉTITION URGENTE : Protéger les acheteurs de l'Ontario",
+                pI1: "Le marché immobilier de l'Ontario subit un ralentissement majeur. Les taux élevés ont poussé les familles au bord du gouffre.",
+                pI2: "Le budget 2026 a annoncé une exonération totale de la TVH pour les futurs acheteurs, excluant les acheteurs actuels.",
+                pI3: "Nous demandons au gouvernement d'appliquer cette exonération rétroactivement aux projets de 2024-2027.",
+                mP1T: "Partie 1 : Remboursement rétroactif de 13 % TVH (2024-2027)",
+                mP1LL: "Raisonnement juridique (Équité fiscale)",
+                mP1LD: "Les politiques ne doivent pas créer de discrimination. L'approche actuelle pénalise les premiers soutiens du secteur.",
+                mP1SL: "Impact social",
+                mP1SD: "Les propriétaires font face à un écart de 150k$-350k$. Le remboursement aide directement à éviter la faillite.",
+                mP2T: "Partie 2 : Reconnaître le « défaut non subjectif »",
+                mP2LL: "Raisonnement juridique (Force majeure / Frustration)",
+                mP2LD: "La loi doit protéger les individus honnêtes. Les retards et les hausses de taux étaient imprévisibles lors de la signature.",
+                mP2SL: "Impact social",
+                mP2SD: "L'incapacité de conclure due à la chute des prix ne doit pas être traitée comme un défaut malveillant.",
+                mP3T: "Partie 3 : Mécanisme tripartite de partage des charges",
+                mP3LL: "Raisonnement juridique (Responsabilité administrative)",
+                mP3LD: "En cas d'échec du marché, le gouvernement a le devoir d'intervenir :",
+                mP3Li: "<li>Allègement fiscal (LTT) pour les zones touchées.</li><li>Financement collaboratif (VTB) avec les promoteurs.</li><li>Subventions d'intérêt pour les prêts privés.</li>",
+                mP4T: "Partie 4 : Atténuer les risques systémiques",
+                mP4In: "La faillite de milliers de familles entraînera :",
+                mP4Li: "<li>Paralysie judiciaire.</li><li>Crise de santé publique (santé mentale).</li><li>Instabilité du crédit et perte de revenus fiscaux.</li>",
+                manS: "« Redonner aux politiques du logement leur but initial : protéger les familles. »",
+                priT: "<strong>Engagement de confidentialité :</strong> Les données sensibles sont cryptées. Les identités ne seront JAMAIS divulguées sans consentement.",
+                donT: "Donation volontaire",
+                donD: "Les fonds seront utilisés en toute transparence pour le matériel de manifestation.",
+                donI1T: "Promotion", donI1D: "Bannières, pancartes, vestes et publicité.",
+                donI2T: "Équipement audio", donI2D: "Location de systèmes sonores pour être entendu.",
+                donI3T: "Logistique", donI3D: "Frais de permis, impression de documents et premiers secours.",
+                donT1: "Usage dédié", donT2: "Divulgation périodique",
+                fooQT: "Scanner pour rejoindre les groupes ethniques",
+                qrD1: "Groupe : Nathan Philips Square (Weekend)",
+                qrD2: "Groupe : Queen's Park (Semaine)",
+                qrD3: "Groupe : WhatsApp Home HST Protest",
+                fooET: "Email : Homeowners2026@hotmail.com"
+            },
+            hi: {
+                navP: "रैली कार्यक्रम", navA: "कार्रवाई", navM: "घोषणापत्र",
+                heroT: "अपने घरों की रक्षा करें<br><span class='text-red-500'>अधिकारों को बचाएं</span>",
+                heroS: "यदि आप 2024-2027 में घर ले रहे हैं और संकट का सामना कर रहे हैं, तो हमसे जुड़ें।",
+                countL: "पहली रैली के लिए उलटी गिनती", btnP: "याचिका पर हस्ताक्षर करें",
+                proT: "विरोध कार्यक्रम", proST: "सटीक स्थान और आधिकारिक समय सारणी",
+                r1T: "1. पहली रैली", r1D: "रविवार, 10 मई, 2026", r1LN: "नाथन फिलिप्स स्क्वायर",
+                r2T: "2. मुख्य विरोध", r2D: "शुक्रवार, 22 मई, 2026", r2LN: "क्वीन्स पार्क (दक्षिण मैदान)",
+                addrL: "स्थान / पता:",
+                actST: "भाग 1: सर्वेक्षण पर हस्ताक्षर करें",
+                actSD: "कृपया सर्वेक्षण पूरा करें। आपकी प्रतिक्रिया सरकार के साथ हमारी बातचीत में एक शक्तिशाली हथियार है।",
+                btnST: "गूगल फॉर्म भरें",
+                actVT: "भाग 2: अपनी बात कहें (Voices Wall)",
+                actVD: "अपनी कहानी साझा करें। मीडिया और जनता को डेटा के पीछे असली मानवीय पीड़ा देखने दें।",
+                btnVT: "पैडलेट वॉल पर जाएं",
+                manT: "तत्काल याचिका: घोषणापत्र",
+                pT: "तत्काल याचिका: ओंटारियो के घर खरीदारों की सुरक्षा",
+                pI1: "ओंटारियो रियल एस्टेट बाजार मंदी का सामना कर रहा है। उच्च ब्याज दरों ने परिवारों को आर्थिक तबाही की ओर धकेल दिया है।",
+                pI2: "2026 के बजट में HST छूट की घोषणा की गई, लेकिन इसमें मौजूदा खरीदारों को शामिल नहीं किया गया है।",
+                pI3: "हम 2024-2027 के बीच घर लेने वालों के लिए इस HST छूट को पिछली तारीख से लागू करने की मांग करते हैं।",
+                mP1T: "भाग 1: 13% HST छूट को पिछली तारीख से लागू करें (2024-2027)",
+                mP1LL: "कानूनी तर्क (कर समानता का सिद्धांत)",
+                mP1LD: "नीतियों को भेदभाव नहीं करना चाहिए। वर्तमान दृष्टिकोण पुराने खरीदारों पर बोझ डालता है।",
+                mP1SL: "सामाजिक प्रभाव",
+                mP1SD: "गृहस्वामियों को $150k-$350k के घाटे का सामना करना पड़ रहा है। छूट से घर लेना संभव होगा।",
+                mP2T: "भाग 2: 'गैर-व्यक्तिगत चूक' को मान्यता दें",
+                mP2LL: "कानूनी तर्क (अप्रत्याशित परिस्थिति / Force Majeure)",
+                mP2LD: "ईमानदार खरीदारों की रक्षा होनी चाहिए। देरी और दर वृद्धि अनपेक्षित थी।",
+                mP2SL: "सामाजिक प्रभाव",
+                mP2SD: "मूल्यांकन गिरने के कारण घर न ले पाना दुर्भावनापूर्ण चूक नहीं माना जाना चाहिए।",
+                mP3T: "भाग 3: सरकार-बिल्डर-खरीदार साझा तंत्र",
+                mP3LL: "कानूनी तर्क (सरकारी जिम्मेदारी)",
+                mP3LD: "बाजार की विफलता के समय, हस्तक्षेप करना सरकार का कर्तव्य है :",
+                mP3Li: "<li>LTT टैक्स राहत।</li><li>बिल्डरों के साथ वित्त पोषण समन्वय।</li><li>निजी ऋणों के लिए ब्याज सब्सिडी।</li>",
+                mP4T: "भाग 4: प्रणालीगत जोखिमों को कम करना",
+                mP4In: "हजारों परिवारों के दिवालिया होने से :",
+                mP4Li: "<li>न्यायिक तंत्र पर बोझ।</li><li>मानसिक स्वास्थ्य संकट।</li><li>लंबे समय तक कर राजस्व का नुकसान।</li>",
+                manS: "“आवास नीतियों को उनके मूल उद्देश्य पर लौटाएं: परिवारों की रक्षा।”",
+                priT: "<strong>गोपनीयता प्रतिबद्धता:</strong> डेटा एन्क्रिप्टेड है। पहचान सार्वजनिक नहीं की जाएगी।",
+                donT: "स्वैच्छिक दान",
+                donD: "धन का उपयोग रैली सामग्री के लिए पारदर्शी रूप से किया जाएगा।",
+                donI1T: "प्रचार", donI1D: "बैनर, संकेत और विज्ञापन के लिए।",
+                donI2T: "ऑडियो उपकरण", donI2D: "सार्वजनिक स्थानों पर सुनने के लिए ध्वनि प्रणाली।",
+                donI3T: "लॉजिस्टिक्स", donI3D: "परमिट शुल्क, मुद्रण और प्राथमिक चिकित्सा।",
+                donT1: "समर्पित उपयोग", donT2: "नियमित खुलासा",
+                fooQT: "समूहों में शामिल होने के लिए स्कैन करें",
+                qrD1: "ग्रुप: सप्ताहांत रैली (नाथन फिलिप्स स्क्वायर)",
+                qrD2: "ग्रुप: कार्यदिवस रैली (क्वीन्स पार्क)",
+                qrD3: "ग्रुप: WhatsApp Home HST Protest",
+                fooET: "ईमेल: Homeowners2026@hotmail.com"
+            },
+            it: {
+                navP: "Calendario", navA: "Azione", navM: "Manifesto",
+                heroT: "Proteggi le nostre case<br><span class='text-red-500'>Difendi i nostri diritti</span>",
+                heroS: "Chiusura nel 2024-2027? Inflazione, equità negativa o minacce legali? Unisciti a noi.",
+                countL: "Conto alla rovescia per la prima protesta", btnP: "Firma la petizione",
+                proT: "Calendario delle proteste", proST: "Luoghi esatti e orari ufficiali",
+                r1T: "1. Prima protesta", r1D: "Domenica 10 maggio 2026", r1LN: "Nathan Phillips Square",
+                r2T: "2. Grande manifestazione", r2D: "Venerdì 22 mayo 2026", r2LN: "Queen's Park (Pelouse sud)",
+                addrL: "Luogo / Indirizzo:",
+                actST: "Parte 1: Firma il sondaggio",
+                actSD: "Completa il sondaggio. Ogni feedback è una leva potente nelle nostre trattative con il governo.",
+                btnST: "Firma Google Form",
+                actVT: "Parte 2: Muro delle voci",
+                actVD: "Condividi la tua storia. Lascia che i media e il pubblico vedano la reale sofferenza umana.",
+                btnVT: "Entra su Padlet",
+                manT: "Petizione urgente: Il Manifesto",
+                pT: "PETIZIONE URGENTE: Protezione degli acquirenti dell'Ontario",
+                pI1: "Il mercato immobiliare dell'Ontario sta vivendo una grave crisi. I tassi elevati hanno messo le famiglie in ginocchio.",
+                pI2: "Il budget 2026 ha annunciato un'esenzione HST per i futuri acquirenti, escludendo quelli attuali.",
+                pI3: "Chiediamo al governo di applicare l'esenzione retroattivamente per le chiusure 2024-2027.",
+                mP1T: "Parte 1: Rimborso HST 13% retroattivo (2024-2027)",
+                mP1LL: "Ragionamento giuridico (Equità fiscale)",
+                mP1LD: "Le politiche non devono creare discriminazioni. L'approccio attuale penalizza chi ha sostenuto il settore prima.",
+                mP1SL: "Impatto sociale",
+                mP1SD: "I proprietari affrontano un gap di 150k$-350k$. Il rimborso aiuta direttamente a evitare il fallimento.",
+                mP2T: "Parte 2: Riconoscere l'Inadempimento Non Soggettivo",
+                mP2LL: "Ragionamento giuridico (Forza maggiore)",
+                mP2LD: "La legge deve proteggere chi agisce in buona fede. I ritardi e i tassi erano imprevedibili.",
+                mP2SL: "Impatto sociale",
+                mP2SD: "L'incapacità di chiudere per il calo dei prezzi non è un inadempimento doloso.",
+                mP3T: "Parte 3: Meccanismo di condivisione tripartito",
+                mP3LL: "Ragionamento giuridico (Responsabilità amministrativa)",
+                mP3LD: "In caso di fallimento del mercato, il governo ha il dovere di intervenire :",
+                mP3Li: "<li>Sgravio fiscale (LTT) per aree colpite.</li><li>Finanziamento collaborativo con i costruttori.</li><li>Sussidi per interessi su prestiti privati.</li>",
+                mP4T: "Parte 4: Mitigare i rischi sistemici",
+                mP4In: "Il fallimento di migliaia di famiglie porterà a :",
+                mP4Li: "<li>Paralisi giudiziaria.</li><li>Crisi di salute pubblica (salute mentale).</li><li>Instabilità creditizia e perdita di entrate fiscali.</li>",
+                manS: "«Riportiamo le politiche abitative al loro scopo originale: proteggere le famiglie.»",
+                priT: "<strong>Impegno di riservatezza:</strong> I dati sono criptati. Le identità non saranno mai svelate senza consenso.",
+                donT: "Donazione volontaria",
+                donD: "I fondi saranno usati in trasparenza per il materiale di protesta.",
+                donI1T: "Promozione", donI1D: "Banner, cartelli e pubblicità.",
+                donI2T: "Attrezzatura audio", donI2D: "Noleggio di sistemi sonori.",
+                donI3T: "Logistica", donI3D: "Permessi, stampe e primo soccorso.",
+                donT1: "Uso dedicato", donT2: "Rendiconto periodico",
+                fooQT: "Scansiona per unirti ai gruppi",
+                qrD1: "Gruppo: Nathan Philips Square (Weekend)",
+                qrD2: "Gruppo: Queen's Park (Feriale)",
+                qrD3: "Gruppo: WhatsApp Home HST Protest",
+                fooET: "Email : Homeowners2026@hotmail.com"
+            },
+            ru: {
+                navP: "Митинги", navA: "Участие", navM: "Манифест",
+                heroT: "Защитим наши дома<br><span class='text-red-500'>Отстоим наши права</span>",
+                heroS: "Сделка в 2024-2027? Инфляция, долги или угрозы судом? Присоединяйтесь к нам.",
+                countL: "Отсчет времени до первого митинга", btnP: "Подписать петицию",
+                proT: "График протестов", proST: "Точные места и официальное расписание",
+                r1T: "1. Первый митинг", r1D: "Воскресенье, 10 мая 2026", r1LN: "Nathan Phillips Square",
+                r2T: "2. Главный протест", r2D: "Пятница, 22 мая 2026", r2LN: "Queen's Park (Южный газон)",
+                addrL: "Место / Адрес:",
+                actST: "Часть 1: Подписать петицию",
+                actSD: "Пожалуйста, заполните анкету. Каждый отзыв — это рычаг в наших переговорах с правительством.",
+                btnST: "Подписать Google Form",
+                actVT: "Часть 2: Стена голосов (Voices Wall)",
+                actVD: "Поделитесь своей историей. Пусть СМИ и общественность увидят реальные страдания людей.",
+                btnVT: "Перейти в Padlet",
+                manT: "Срочная петиция: Манифест",
+                pT: "СРОЧНАЯ ПЕТИЦИЯ: Защита покупателей в Онтарио",
+                pI1: "Рынок недвижимости Онтарио переживает спад. Высокие ставки довели семьи до грани краха.",
+                pI2: "Бюджет 2026 объявил об отмене HST для будущих покупателей, исключая текущих.",
+                pI3: "Мы требуем применить льготу HST ретроактивно для сделок 2024-2027 годов.",
+                mP1T: "Часть 1: Ретроактивный возврат 13% HST (2024-2027)",
+                mP1LL: "Юридическое обоснование (Налоговая справедливость)",
+                mP1LD: "Политика не должна создавать дискриминацию. Текущий подход наказывает ранних покупателей.",
+                mP1SL: "Социальный эффект",
+                mP1SD: "Владельцы теряют 150-350 тыс. Возврат налога поможет избежать банкротства.",
+                mP2T: "Часть 2: Признание «непреднамеренного дефолта»",
+                mP2LL: "Юридическое обоснование (Форс-мажор)",
+                mP2LD: "Закон должен защищать честных граждан. Задержки и рост ставок были непредсказуемы.",
+                mP2SL: "Социальный эффект",
+                mP2SD: "Невозможность закрыть сделку из-за обвала цен не является злонамеренным дефолтом.",
+                mP3T: "Часть 3: Трехсторонний механизм распределения бремени",
+                mP3LL: "Юридическое обоснование (Гос. ответственность)",
+                mP3LD: "В случае рыночного сбоя государство обязано вмешаться :",
+                mP3Li: "<li>Налоговые льготы (LTT) для пострадавших районов.</li><li>Кредитование VTB от застройщиков.</li><li>Субсидии по процентам для частных займов.</li>",
+                mP4T: "Часть 4: Смягчение системных рисков",
+                mP4In: "Банкротство тысяч семей приведет к :",
+                mP4Li: "<li>Судебному параличу.</li><li>Кризису психического здоровья.</li><li>Потере налоговых поступлений.</li>",
+                manS: "«Жилищная политика должна защищать семьи.»",
+                priT: "<strong>Конфиденциальность:</strong> Данные зашифрованы. Личности не будут раскрыты без согласия.",
+                donT: "Добровольное пожертвование",
+                donD: "Средства пойдут на материалы для митингов.",
+                donI1T: "Продвижение", donI1D: "Баннеры, плакаты и реклама.",
+                donI2T: "Аудио", donI2D: "Аренда звуковых систем.",
+                donI3T: "Логистика", donI3D: "Разрешения, печать и аптечки.",
+                donT1: "Целевое использование", donT2: "Регулярная отчетность",
+                fooQT: "Сканируйте, чтобы вступить в группы",
+                qrD1: "Группа: Nathan Philips Square (Выходные)",
+                qrD2: "Группа: Queen's Park (Будни)",
+                qrD3: "Группа: WhatsApp Home HST Protest",
+                fooET: "Email : Homeowners2026@hotmail.com"
+            },
+            ja: {
+                navP: "集会日程", navA: "参加", navM: "マニフェスト",
+                heroT: "家を守り、<br><span class='text-red-500'>権利を主張しよう</span>",
+                heroS: "2024-2027年に引き渡し予定で、負債や法的脅威に直面している方は声を上げましょう。",
+                countL: "最初の集会まで", btnP: "署名する",
+                proT: "抗議活動予定表", proST: "正確な場所と公式スケジュール",
+                r1T: "1. 最初の集会", r1D: "2026年5月10日（日）", r1LN: "ネイサン・フィリップス・スクエア",
+                r2T: "2. 主要な抗議デモ", r2D: "2026年5月22日（金）", r2LN: "クイーンズ・パーク（南側）",
+                addrL: "場所 / 住所:",
+                actST: "第1部：アンケートに署名する",
+                actSD: "アンケートにご協力ください。皆様の声が政府との交渉における強力な力となります。",
+                btnST: "Googleフォームで署名",
+                actVT: "第2部：掲示板 (Voices Wall)",
+                actVD: "あなたの物語を共有してください。データの裏にある本当の苦しみを世間に伝えましょう。",
+                btnVT: "Padlet掲示板へ",
+                manT: "緊急請願：マニフェスト",
+                pT: "緊急請願：オンタリオ州の新築購入者を守るために",
+                pI1: "オンタリオ州の不動産市場は深刻な不況にあります。高金利が家族を追い詰めています。",
+                pI2: "2026年度予算でHST免除が発表されましたが、現行の購入者は除外されています。",
+                pI3: "2024年から2027年に引き渡しが行われる物件にHST免税を遡及適用することを求めます。",
+                mP1T: "第1部：13% HST還付の遡及適用 (2024-2027)",
+                mP1LL: "法的根拠（租税公平主義）",
+                mP1LD: "政策は差別を生んではなりません。現在のやり方は早期購入者に不当な負担を強いています。",
+                mP1SL: "社会的影響",
+                mP1SD: "15万〜35万ドルの評価不足に直面しています。還付金があれば引き渡しが可能になります。",
+                mP2T: "第2部：「非主観的債務不履行」の認定と誠実な購入者の保護",
+                mP2LL: "法的根拠（不可抗力 / 契約の目的達成不能）",
+                mP2LD: "誠実な個人は不可抗力下で保護されるべきです。遅延や金利上昇は予見不可能でした。",
+                mP2SL: "社会的影響",
+                mP2SD: "価格暴落による引き渡し不能は、悪意のある不履行として扱うべきではありません。",
+                mP3T: "第3部：政府・開発業者・購入者の三者による負担分担",
+                mP3LL: "法的根拠（行政の責任）",
+                mP3LD: "市場の失敗時、政府には介入する義務があります：",
+                mP3Li: "<li>土地転譲税（LTT）の減免。</li><li>VTBローンの調整。</li><li>金利補助。</li>",
+                mP4T: "第4部：システム的なリスクの軽減",
+                mP4In: "数千世帯の破綻は以下を招きます：",
+                mP4Li: "<li>司法の停滞。</li><li>メンタルヘルス危機。</li><li>長期的な税収の損失。</li>",
+                manS: "「家族を守ることが、住宅政策の本来の目的です。」",
+                priT: "<strong>プライバシー保護：</strong> データは暗号化されます。同意なく個人情報を公開することはありません。",
+                donT: "自発的な寄付",
+                donD: "寄付金は集会用の資材に透明性を持って使用されます。",
+                donI1T: "宣伝", donI1D: "バナー、プラカード、広告用。",
+                donI2T: "音響機器", donI2D: "広場での演説用スピーカーレンタル。",
+                donI3T: "運営", donI3D: "許可申請料、印刷物、救急用品。",
+                donT1: "専用使用", donT2: "定期公開",
+                fooQT: "スキャンしてコミュニティに参加",
+                qrD1: "グループ：ネイサン・フィリップス（週末）",
+                qrD2: "グループ：クイーンズ・パーク（平日）",
+                qrD3: "グループ：WhatsApp Home HST Protest",
+                fooET: "Email : Homeowners2026@hotmail.com"
+            },
+            ko: {
+                navP: "집회 일정", navA: "참여", navM: "성명서",
+                heroT: "우리의 집을 보호하고<br><span class='text-red-500'>권리를 지킵시다</span>",
+                heroS: "2024-2027년 클로징 예정자로 고금리와 법적 위협에 직면해 있다면 함께하십시오.",
+                countL: "첫 집회까지 남은 시간", btnP: "청원에 서명하기",
+                proT: "항의 일정", proST: "정확한 장소 및 공식 시간표",
+                r1T: "1. 1차 집회", r1D: "2026년 5월 10일 (일)", r1LN: "나단 필립스 광장",
+                r2T: "2. 주요 시위", r2D: "2026년 5월 22일 (금)", r2LN: "퀸즈 파크 (남쪽 잔디밭)",
+                addrL: "위치 / 주소:",
+                actST: "1부: 설문 조사 참여",
+                actSD: "설문 조사에 참여해 주세요. 여러분의 피드백은 정부와의 협상에서 강력한 힘이 됩니다.",
+                btnST: "Google 폼 서명",
+                actVT: "2부: 자유 게시판 (Voices Wall)",
+                actVD: "여러분의 이야기를 공유해 주세요. 데이터 뒤에 숨겨진 실제 인간의 고통을 보여주세요.",
+                btnVT: "Padlet 접속",
+                manT: "긴급 청원: 매니페스토",
+                pT: "긴급 청원: 온타리오 부동산 구매자 보호",
+                pI1: "온타리오 부동산 시장이 심각한 침체를 겪고 있습니다. 고금리는 가족들을 파산 위기로 몰아넣었습니다.",
+                pI2: "2026년 예산안에서 HST 면제가 발표되었으나, 기존 구매자들은 제외되었습니다.",
+                pI3: "2024-2027년 사이 클로징되는 프로젝트에 HST 면제를 소급 적용할 것을 요구합니다.",
+                mP1T: "1부: 13% HST 환급 소급 적용 (2024-2027)",
+                mP1LL: "법적 근거 (조세 공평의 원칙)",
+                mP1LD: "정책은 차별을 낳아서는 안 됩니다. 현재 방식은 초기 구매자들에게 불이행의 고통을 전가하고 있습니다.",
+                mP1SL: "사회적 영향",
+                mP1SD: "구매자들은 1.5억~3.5억 원의 감정가 차액에 직면해 있습니다. 소급 적용은 파산을 막는 대안입니다.",
+                mP2T: "2부: '비자발적 채무 불이행' 인정 및 법적 추심 제한",
+                mP2LL: "법적 근거 (불가항력 / 계약 이행 불능)",
+                mP2LD: "선의의 피해자는 보호받아야 합니다. 지연 및 금리 폭등은 예견할 수 없었습니다.",
+                mP2SL: "사회적 영향",
+                mP2SD: "감정가 폭락으로 인한 클로징 불가는 악의적인 불이행으로 간주되어서는 안 됩니다.",
+                mP3T: "3부: 정부-개발사-구매자 3자 부담 공유",
+                mP3LL: "법적 근거 (행정적 책임)",
+                mP3LD: "시장 실패 시 정부는 개입할 의무가 있습니다 :",
+                mP3Li: "<li>LTT 세금 감면.</li><li>개발사 VTB 모기지 조정.</li><li>이자 보조금 지원.</li>",
+                mP4T: "4부: 시스템적 위험 완화",
+                mP4In: "수천 가구의 파산은 다음을 초래합니다 :",
+                mP4Li: "<li>사법 마비.</li><li>정신 건강 위기.</li><li>장기적인 세수 손실.</li>",
+                manS: "“주택 정책의 본질인 '가정 보호'로 돌아가야 합니다.”",
+                priT: "<strong>개인정보 보호 약속:</strong> 데이터는 암호화됩니다. 동의 없이 신원을 공개하지 않습니다.",
+                donT: "자발적 기부",
+                donD: "기부금은 집회 물품 제작에 투명하게 사용됩니다.",
+                donI1T: "홍보", donI1D: "배너, 피켓 및 광고용.",
+                donI2T: "음향 장비", donI2D: "광장 집회용 스피커 대여.",
+                donI3T: "물류", donI3D: "허가 수수료, 인쇄 및 구급 상자.",
+                donT1: "전용 사용", donT2: "정기 공개",
+                fooQT: "가입하려면 QR 코드를 스캔하세요",
+                qrD1: "그룹: 나단 필립스 (주말)",
+                qrD2: "그룹: 퀸즈 파크 (평일)",
+                qrD3: "그룹: WhatsApp Home HST Protest",
+                fooET: "이메일 : Homeowners2026@hotmail.com"
+            }
+        };
+
+        function switchLanguage(lang) {
+            const data = langData[lang] || langData['zh'];
+            
+            // Layout classes
+            document.body.classList.toggle('rtl', lang === 'fa');
+
+            // Direct mapping
+            const map = {
+                'nav-protest': data.navP, 'nav-action': data.navA, 'nav-manifesto': data.navM,
+                'hero-title': data.heroT, 'hero-subtitle': data.heroS, 'countdown-label': data.countL, 'btn-petition': data.btnP,
+                'section-protest-title': data.proT, 'section-protest-subtitle': data.proST,
+                'rally1-title': data.r1T, 'rally1-date-zh': data.r1D, 'rally1-loc-name': data.r1LN,
+                'rally2-title': data.r2T, 'rally2-date-zh': data.r2D, 'rally2-loc-name': data.r2LN, 'addr-label': data.addrL,
+                'action-survey-title': data.actST, 'action-survey-desc': data.actSD, 'btn-survey-text': data.btnST,
+                'action-voices-title': data.actVT, 'action-voices-desc': data.actVD, 'btn-voices-text': data.btnVT,
+                'section-manifesto-title': data.manT, 'petition-title': data.pT,
+                'p-intro-1': data.pI1, 'p-intro-2': data.pI2, 'p-intro-3': data.pI3,
+                'm-p1-title': data.mP1T, 'm-p1-l-label': data.mP1LL, 'm-p1-l-desc': data.mP1LD, 'm-p1-s-label': data.mP1SL, 'm-p1-s-desc': data.mP1SD,
+                'm-p2-title': data.mP2T, 'm-p2-l-label': data.mP2LL, 'm-p2-l-desc': data.mP2LD, 'm-p2-s-label': data.mP2SL, 'm-p2-s-desc': data.mP2SD,
+                'm-p3-title': data.mP3T, 'm-p3-l-label': data.mP3LL, 'm-p3-l-desc': data.mP3LD, 'm-p3-list': data.mP3Li,
+                'm-p4-title': data.mP4T, 'm-p4-intro': data.mP4In, 'm-p4-list': data.mP4Li,
+                'manifesto-slogan': data.manS, 'privacy-text': data.priT,
+                'donation-title': data.donT, 'donation-desc': data.donD,
+                'don-item1-title': data.donI1T, 'don-item1-desc': data.donI1D,
+                'don-item2-title': data.donI2T, 'don-item2-desc': data.donI2D,
+                'don-item3-title': data.donI3T, 'don-item3-desc': data.donI3D,
+                'don-tag1': data.donT1, 'don-tag2': data.donT2,
+                'footer-qr-title': data.fooQT, 'qr-desc1': data.qrD1, 'qr-desc2': data.qrD2, 'qr-desc3': data.qrD3, 'footer-email-tag': data.fooET
+            };
+
+            for (const [id, text] of Object.entries(map)) {
+                const el = document.getElementById(id);
+                if (el) el.innerHTML = text;
+            }
+        }
+
+        // Countdown Logic
+        function updateCountdown() {
+            const targetDate = new Date("May 10, 2026 13:00:00").getTime();
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const dEl = document.getElementById("days");
+            const hEl = document.getElementById("hours");
+            const mEl = document.getElementById("minutes");
+
+            if (!dEl || !hEl || !mEl) return;
+
+            if (distance < 0) {
+                dEl.innerText = "00";
+                hEl.innerText = "00";
+                mEl.innerText = "00";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+            dEl.innerText = days.toString().padStart(2, '0');
+            hEl.innerText = hours.toString().padStart(2, '0');
+            mEl.innerText = minutes.toString().padStart(2, '0');
+        }
+
+        window.onload = function() {
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+            switchLanguage('zh'); // Set default
+        };
+    </script>
+</body>
+</html>
