@@ -180,6 +180,124 @@
                     </div>
                 </div>
             </div>
+            <!-- ====================================================================== -->
+<!-- 把下面这一整块复制粘贴到 index.html 中第 182 行和 183 行之间             -->
+<!-- (即:在两个 grid 卡片的关闭 </div> 之后, max-w-6xl 关闭 </div> 之前)    -->
+<!-- 也就是两个连续 </div> 的中间那行空白处                                  -->
+<!-- ====================================================================== -->
+
+<!-- 5月10日游行交通与活动信息 / May 10 March Logistics & Travel Info -->
+<div class="glass-card rounded-[2.5rem] shadow-2xl border border-slate-100 mb-20 overflow-hidden">
+
+    <!-- 标题栏 / Header -->
+    <div class="bg-slate-900 text-white p-10">
+        <h3 class="text-2xl md:text-3xl font-black leading-tight">
+            <i class="fas fa-route text-red-500 mr-3"></i>
+            May 10 March — Travel &amp; Logistics
+        </h3>
+        <p class="text-slate-300 font-bold mt-2">5月10日游行 — 交通与现场指引 / . اطلاعات سفر</p>
+    </div>
+
+    <div class="p-10 space-y-10">
+
+        <!-- 公共交通 / Public Transit -->
+        <div>
+            <div class="flex items-start mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mr-6 shrink-0">
+                    <i class="fas fa-subway text-red-600 text-xl"></i>
+                </div>
+                <div>
+                    <p class="font-black text-xl">Take Public Transit (Recommended)</p>
+                    <p class="text-slate-500 font-bold">推荐使用公共交通 / . از حمل‌ونقل عمومی</p>
+                </div>
+            </div>
+            <p class="text-slate-700 font-semibold ml-2">Please reduce traffic — take TTC, GO, or bike where possible:</p>
+            <p class="text-slate-500 ml-2 mb-4">为减少交通拥堵,请尽量乘坐 TTC、GO 公交或骑行前往:</p>
+            <ul class="list-disc pl-8 space-y-3 text-slate-700 font-semibold">
+                <li>TTC Subway Line 1 → <strong>Osgoode Station</strong> (2-min walk to City Hall)<br>
+                    <span class="text-slate-500 font-normal">TTC 1 号线 → Osgoode 地铁站,步行 2 分钟即到市政厅</span></li>
+                <li>TTC Streetcar 501 Queen → get off at Queen St W &amp; Bay St<br>
+                    <span class="text-slate-500 font-normal">501 路有轨电车 → 在 Queen St W / Bay St 下车</span></li>
+                <li>GO Transit → Union Station, then Line 1 northbound 2 stops<br>
+                    <span class="text-slate-500 font-normal">GO 火车 → Union 站换乘地铁 1 号线向北 2 站</span></li>
+            </ul>
+        </div>
+
+        <!-- SpotHero 停车 / SpotHero Parking -->
+        <div class="bg-blue-50 rounded-2xl p-6">
+            <div class="flex items-start">
+                <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center mr-6 shrink-0">
+                    <i class="fas fa-parking text-blue-600 text-xl"></i>
+                </div>
+                <div class="flex-grow">
+                    <p class="font-black text-xl">Need to Drive? Use SpotHero</p>
+                    <p class="text-slate-500 font-bold mb-3">需要开车?推荐用 SpotHero 提前预订车位</p>
+                    <p class="text-slate-700 mb-2">If driving is unavoidable, book parking in advance with SpotHero — affordable downtown spots, no cruising.</p>
+                    <p class="text-slate-500 mb-4">如果必须开车,建议提前用 SpotHero 预订市中心停车位,方便又实惠,免去现场找车位的烦恼。</p>
+                    <a href="https://spothero.com/" target="_blank" rel="noopener"
+                       class="inline-block px-6 py-3 bg-blue-600 text-white rounded-xl font-black hover:bg-blue-700 transition">
+                        <i class="fas fa-external-link-alt mr-2"></i>Open SpotHero / 打开 SpotHero
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 游行路线图 / March Route Map -->
+        <div>
+            <div class="flex items-start mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mr-6 shrink-0">
+                    <i class="fas fa-map-signs text-red-600 text-xl"></i>
+                </div>
+                <div>
+                    <p class="font-black text-xl">March Route</p>
+                    <p class="text-slate-500 font-bold">游行路线 / . مسیر راهپیمایی</p>
+                </div>
+            </div>
+            <p class="text-slate-700 mb-2">Start: <strong>Grange Park</strong> → End: <strong>Nathan Phillips Square (Toronto City Hall)</strong> · approx. 13 minutes / 950 m walk.</p>
+            <p class="text-slate-500 mb-5">起点 <strong>Grange Park</strong> → 终点 <strong>Nathan Phillips Square (多伦多市政厅)</strong>,全程约 13 分钟、950 米。</p>
+            <img src="march-route-map.png"
+                 alt="May 10 March Route Map / 5月10日游行路线图"
+                 class="w-full max-w-4xl mx-auto rounded-2xl shadow-xl">
+        </div>
+
+        <!-- 游行 T 恤海报 / T-shirt Poster -->
+        <div>
+            <div class="flex items-start mb-4">
+                <div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mr-6 shrink-0">
+                    <i class="fas fa-tshirt text-red-600 text-xl"></i>
+                </div>
+                <div>
+                    <p class="font-black text-xl">Official March T-Shirt</p>
+                    <p class="text-slate-500 font-bold">游行官方 T 恤 — “Same Unit, Same Tax”</p>
+                </div>
+            </div>
+            <img src="march-tshirt-poster.jpg"
+                 alt="HST Fairness March T-Shirt — Same Unit, Same Tax"
+                 class="w-full max-w-2xl mx-auto rounded-2xl shadow-xl">
+        </div>
+
+        <!-- 免责书提醒 / Waiver Reminder -->
+        <div class="bg-amber-50 border-l-4 border-amber-500 rounded-2xl p-6">
+            <div class="flex items-start">
+                <div class="w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center mr-6 shrink-0">
+                    <i class="fas fa-file-signature text-amber-600 text-xl"></i>
+                </div>
+                <div class="flex-grow">
+                    <p class="font-black text-xl text-amber-900">IMPORTANT — Print &amp; Bring Your Waiver</p>
+                    <p class="text-amber-800 font-bold mb-3">重要提醒 — 请提前打印并带上签字的免责书</p>
+                    <p class="text-slate-700 mb-2">All participants must print the Participation Waiver, sign it at home, and bring the paper copy to the event. Volunteers will collect signed waivers on site.</p>
+                    <p class="text-slate-500 mb-4">所有参与者请务必打印《参与活动豁免及免责协议》,在家签好名后带到现场。届时会有志愿者现场回收纸质免责书。</p>
+                    <a href="Participation-Waiver-and-Release-of-Liability.pdf" target="_blank" rel="noopener"
+                       class="inline-block px-6 py-3 bg-amber-600 text-white rounded-xl font-black hover:bg-amber-700 transition">
+                        <i class="fas fa-download mr-2"></i>Download Waiver / 下载免责书 PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- ===== 5月10日游行交通信息块 结束 / End of March Logistics Block ===== -->
         </div>
     </section>
 
